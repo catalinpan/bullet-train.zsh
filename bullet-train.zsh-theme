@@ -441,7 +441,7 @@ prompt_git() {
 
     eval git_prompt=${BULLETTRAIN_GIT_PROMPT_CMD}
     if [[ $BULLETTRAIN_GIT_EXTENDED == true ]]; then
-      echo -n ${git_prompt}$(git_prompt_status)
+      echo -n ${git_prompt}$(_omz_git_prompt_status)
     else
       echo -n ${git_prompt}
     fi
